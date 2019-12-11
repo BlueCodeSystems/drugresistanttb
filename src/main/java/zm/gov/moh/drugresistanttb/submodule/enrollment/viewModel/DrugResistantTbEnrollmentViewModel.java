@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import zm.gov.moh.core.model.Key;
 import zm.gov.moh.core.utils.BaseAndroidViewModel;
+import zm.gov.moh.core.utils.ConcurrencyUtils;
 
 public class DrugResistantTbEnrollmentViewModel extends BaseAndroidViewModel {
 
@@ -25,7 +26,8 @@ public class DrugResistantTbEnrollmentViewModel extends BaseAndroidViewModel {
     }
 
     public void enrollPatient(Bundle bundle) {
-        getRepository().consumeAsync(this::enrollClient, this::onError, bundle);
+        ConcurrencyUtils.consumeAsync(this::enrollPatient, this::onError,bundle);
+        //getRepository().consumeAsync(this::enrollClient, this::onError, bundle);
     }
 
     public void enrollClient(Bundle bundle) {
