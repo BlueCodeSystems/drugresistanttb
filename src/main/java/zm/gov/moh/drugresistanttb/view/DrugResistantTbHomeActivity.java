@@ -1,7 +1,7 @@
 package zm.gov.moh.drugresistanttb.view;
 
 import androidx.fragment.app.FragmentManager;
-import zm.gov.moh.common.ui.BaseActivity;
+import zm.gov.moh.common.base.BaseActivity;
 import zm.gov.moh.drugresistanttb.R;
 
 import android.os.Bundle;

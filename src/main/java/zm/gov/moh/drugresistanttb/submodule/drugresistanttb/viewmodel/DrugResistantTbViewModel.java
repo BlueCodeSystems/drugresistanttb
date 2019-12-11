@@ -30,7 +30,7 @@ public class DrugResistantTbViewModel extends BaseAndroidViewModel {
 
     public void startSubmodule(int index){
 
-        ModuleGroup drugResistantTbSubmodule = (ModuleGroup)((BaseApplication)getApplication()).getSubmodule(DrugResistantTbModule.MODULE);
+        ModuleGroup drugResistantTbSubmodule = (ModuleGroup)((BaseApplication)getApplication()).getModule(DrugResistantTbModule.MODULE);
 
         Module module1 = drugResistantTbSubmodule.getModules().get(index);
         startSubmodule.setValue(module1);
