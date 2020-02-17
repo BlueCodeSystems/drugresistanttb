@@ -19,9 +19,10 @@
         android:orientation="vertical"
         android:padding="5dp"
         tools:context=".module.dashboard.patient.view.DrugResistantTbPatientDashboardVisitFragment">
+
         <ExpandableListView
             android:outlineSpotShadowColor="@color/black"
-            android:id="@+id/visit_list"
+            android:id="@+id/mdr_visit_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -30,8 +31,8 @@
             android:layout_height="wrap_content"
             android:visibility="@{(numberOfVisits > 0)?View.GONE : View.VISIBLE}"
             android:orientation="vertical"
-
             android:layout_gravity="center">
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -46,15 +47,7 @@
                 android:layout_gravity="center"/>
         </LinearLayout>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="20dp"
-            android:src="@android:drawable/ic_input_add"
-            android:onClick="@{()-> context.startVisit()}"
-            android:tint="@color/white" />
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
